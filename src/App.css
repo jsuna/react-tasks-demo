@@ -1,24 +1,36 @@
-.App {
-  text-align: center;
+.table>tbody>tr>td { border: none; }
+*:focus {outline:none !important}
+.margin-bottom-0 {
+  margin-bottom: 0;
+}
+.no-tasks {
+  position: relative;
+  background-image: url(http://www.greatdanegraphics.com/content/images/thumbs/0022215_relaxing-at-the-beach.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+  margin: 20px auto 0;
+}
+.no-tasks:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  /*opacity: .9;*/
+  animation: fadeNoTasks 4s;
+  animation-fill-mode: forwards;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+@keyframes fadeNoTasks {
+  from {opacity: 1;}
+  to {opacity: .9;}
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
 .App-intro {
   font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
